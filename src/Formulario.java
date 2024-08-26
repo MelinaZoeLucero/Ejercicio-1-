@@ -38,6 +38,7 @@ public class Formulario extends javax.swing.JFrame {
         JPassclave = new javax.swing.JPasswordField();
         Registro = new javax.swing.JButton();
         JBVer = new javax.swing.JButton();
+        JBOcultar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,6 +90,13 @@ public class Formulario extends javax.swing.JFrame {
             }
         });
 
+        JBOcultar.setText("Ocultar");
+        JBOcultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBOcultarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -109,7 +117,9 @@ public class Formulario extends javax.swing.JFrame {
                         .addComponent(Registro)))
                 .addContainerGap(71, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(32, 32, 32)
+                .addComponent(JBOcultar, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(JBVer, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(50, 50, 50))
         );
@@ -127,7 +137,9 @@ public class Formulario extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addComponent(Registro)
                 .addGap(37, 37, 37)
-                .addComponent(JBVer, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(JBVer, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JBOcultar, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
 
@@ -180,6 +192,10 @@ JOptionPane.showMessageDialog(null,"Bienvenido");
         
     }//GEN-LAST:event_JBVerActionPerformed
 
+    private void JBOcultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBOcultarActionPerformed
+       JPassclave.setEchoChar('*');
+    }//GEN-LAST:event_JBOcultarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -221,6 +237,7 @@ JOptionPane.showMessageDialog(null,"Bienvenido");
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Contraseña;
     private javax.swing.JLabel Inicio;
+    private javax.swing.JButton JBOcultar;
     private javax.swing.JButton JBVer;
     private javax.swing.JPasswordField JPassclave;
     private javax.swing.JButton Registro;
